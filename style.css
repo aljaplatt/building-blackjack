@@ -1,0 +1,33 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+  /* margin: 0 auto; */
+  /* max-width: 500px; */
+  /* border: 3px solid red; */
+  text-align: center;
+  background-image: url("./img/poker.jpg");
+  background-size: cover;
+}
+
+h1 {
+  color: goldenrod;
+  font-size: 3rem;
+}
+
+.message-el {
+  font-style: italic;
+}
+
+button {
+  color: #016f32;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 150px;
+  background: goldenrod;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+}
