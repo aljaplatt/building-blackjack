@@ -12,9 +12,11 @@ let isAlive = true;
 let message = "";
 // 2. Reassign the message variable to the string we're logging out
 
-function startGame() {
-  sumEl.textContent = sumEl.textContent + sum;
-  cardsEl.textContent = cardsEl.textContent + `${firstCard} and ${secondCard}`;
+const startGame = () => renderGame();
+
+function renderGame() {
+  sumEl.textContent = "Total: " + sum;
+  cardsEl.textContent = "Cards:" + `${firstCard} and ${secondCard}`;
 
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
@@ -28,4 +30,9 @@ function startGame() {
   messageEl.textContent = message;
 }
 
-// 3. Log it out!
+function newCard() {
+  console.log("Drawing a new card from the deck!");
+  let card = 4;
+  sum += card;
+  renderGame();
+}
