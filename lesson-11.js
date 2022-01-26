@@ -1,25 +1,30 @@
 let messageEl = document.querySelector(".message-el");
 let sumEl = document.querySelector(".sum-el");
 let cardsEl = document.querySelector(".cards-el");
-console.log(messageEl);
 
+let cards = [];
+let sum;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
-// arrow fn not hoisted fn expression - have to move variables below - check 36
+// fn declaration is hoisted - arrow fn not hoisted = fn expression - have to move variables below - check 36
 const getRandomCard = () => {
-  // Math.floor(Math.random());
-  return 5;
+  let randomCard = Math.floor(Math.random() * 11) + 1;
+  if (randomCard === 1) {
+    return 11;
+  }
+  return randomCard;
 };
 
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
-
-const startGame = () => renderGame();
-
+const startGame = () => {
+  isAlive = true;
+  let firstCard = getRandomCard();
+  let secondCard = getRandomCard();
+  cards = [firstCard, secondCard];
+  sum = firstCard + secondCard;
+  renderGame();
+};
 function renderGame() {
   // render out cards
   cardsEl.textContent = `Your cards are: `;
@@ -51,3 +56,5 @@ function newCard() {
   console.log(cards);
   renderGame();
 }
+
+// lesson 46

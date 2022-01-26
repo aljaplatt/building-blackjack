@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -8,25 +13,45 @@ body {
   /* max-width: 500px; */
   /* border: 3px solid red; */
   text-align: center;
-  background-image: url("./img/poker.jpg");
+  background-image: url("./img/blackjack.jpg");
   background-size: cover;
 }
 
-h1 {
-  color: goldenrod;
+.section {
+  background: rgba(128, 128, 128, 0.8);
+  padding: 2rem 2rem 2rem 2rem;
+  max-width: 30rem;
+  margin: 6rem auto;
+  border-radius: 12px;
+}
+
+.section__title {
+  color: #000;
   font-size: 3rem;
+  display: inline;
+}
+
+.section__title--mod {
+  color: #a4161a;
 }
 
 .message-el {
   font-style: italic;
+  padding-top: 1rem;
 }
 
-button {
-  color: #016f32;
+.cards-el,
+.sum-el {
+  padding-top: 1rem;
+}
+
+.button {
+  margin-top: 1rem;
+  color: #370617;
   font-size: 1rem;
   font-weight: 700;
   width: 150px;
-  background: goldenrod;
+  background: #ffba08;
   padding: 1em;
   border: none;
   border-radius: 8px;
