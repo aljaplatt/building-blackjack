@@ -5,18 +5,18 @@ console.log(messageEl);
 
 let firstCard = 10;
 let secondCard = 2;
+let cards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
-// 1. Declare a variable called message and assign its value to an empty string
 let message = "";
-// 2. Reassign the message variable to the string we're logging out
 
 const startGame = () => renderGame();
 
 function renderGame() {
+  // render out cards
+  cardsEl.textContent = `Your cards are: ${cards[0]} and ${cards[1]}`;
   sumEl.textContent = "Total: " + sum;
-  cardsEl.textContent = "Cards:" + `${firstCard} and ${secondCard}`;
 
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
@@ -34,5 +34,7 @@ function newCard() {
   console.log("Drawing a new card from the deck!");
   let card = 4;
   sum += card;
+  cards.push(card);
+  console.log(cards);
   renderGame();
 }
