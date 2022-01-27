@@ -1,12 +1,21 @@
+const player = {
+  name: "Alex",
+  chips: 100,
+};
+
 let messageEl = document.querySelector(".message-el");
 let sumEl = document.querySelector(".sum-el");
 let cardsEl = document.querySelector(".cards-el");
+let playerEl = document.querySelector(".player-el");
 
 let cards = [];
 let sum;
 let hasBlackJack = false;
 let isAlive = false;
 let message = "";
+
+// render the player name and chips
+playerEl.textContent = player.name + ": $" + player.chips;
 
 // fn declaration is hoisted - arrow fn not hoisted = fn expression - have to move variables below - check 36
 const getRandomCard = () => {
@@ -49,12 +58,14 @@ function renderGame() {
 }
 
 function newCard() {
-  console.log("Drawing a new card from the deck!");
-  let card = getRandomCard();
-  sum += card;
-  cards.push(card);
-  console.log(cards);
-  renderGame();
+  if (isAlive && !hasBlackJack) {
+    // console.log("Drawing a new card from the deck!");
+    let card = getRandomCard();
+    sum += card;
+    cards.push(card);
+    console.log(cards);
+    renderGame();
+  }
 }
 
 // lesson 46

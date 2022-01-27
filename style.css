@@ -35,14 +35,12 @@ body {
   color: #a4161a;
 }
 
-.message-el {
-  font-style: italic;
+p {
   padding-top: 1rem;
 }
 
-.cards-el,
-.sum-el {
-  padding-top: 1rem;
+.message-el {
+  font-style: italic;
 }
 
 .button {
